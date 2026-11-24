@@ -1,0 +1,566 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --crema: #fff8ed;
+    --rosa: #f4d8d0;
+    --rosa-fuerte: #d98d7b;
+    --cafe: #684331;
+    --dorado: #d6a85f;
+    --verde: #78845c;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--crema);
+    color: var(--cafe);
+    line-height: 1.6;
+}
+
+/* ENCABEZADO */
+
+header {
+    background: #fffaf4;
+    padding: 15px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    box-shadow: 0 3px 12px #00000012;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--cafe);
+}
+
+.logo img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.logo h1 {
+    font-size: 25px;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--cafe);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: var(--rosa-fuerte);
+}
+
+/* PORTADA */
+
+.hero {
+    min-height: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    background:
+        linear-gradient(#4b302d88, #4b302d88),
+        url("logo-dulce-de-pay.jpg") center/cover;
+    color: white;
+}
+
+.hero-contenido {
+    max-width: 700px;
+}
+
+.hero h2 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 19px;
+    margin-bottom: 25px;
+}
+
+/* BOTONES */
+
+.boton {
+    display: inline-block;
+    background: var(--rosa-fuerte);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+    border: 0;
+    cursor: pointer;
+    font: inherit;
+}
+
+.boton:hover {
+    background: var(--cafe);
+    transform: translateY(-2px);
+}
+
+.boton-secundario {
+    background: var(--verde);
+}
+
+/* SECCIONES */
+
+.seccion {
+    padding: 65px 7%;
+    text-align: center;
+}
+
+.seccion h2,
+.panel-precios h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: var(--cafe);
+}
+
+.descripcion {
+    margin-bottom: 30px;
+    color: #876d5c;
+}
+
+.fondo-claro {
+    background: #f8e9df;
+}
+
+/* TARJETAS DE POSTRES */
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.tarjeta {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    padding: 20px;
+    box-shadow: 0 5px 18px #68433115;
+    transition: .3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px #68433125;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.tarjeta h3 {
+    margin: 15px 0 8px;
+    color: var(--rosa-fuerte);
+}
+
+.tarjeta p {
+    margin-bottom: 15px;
+}
+
+/* TABLAS */
+
+.tabla-contenedor {
+    overflow-x: auto;
+    margin-top: 12px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    min-width: 430px;
+}
+
+th {
+    background: var(--cafe);
+    color: white;
+    padding: 13px;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #eadbd0;
+}
+
+tr:hover td {
+    background: #fff3eb;
+}
+
+.tabla-costos {
+    margin: 30px auto;
+    max-width: 950px;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px #68433115;
+    text-align: left;
+}
+
+.tabla-costos h3 {
+    text-align: center;
+    color: var(--rosa-fuerte);
+    font-size: 24px;
+}
+
+.tabla-costos h4 {
+    color: var(--cafe);
+    margin-top: 22px;
+    margin-bottom: 8px;
+    font-size: 17px;
+}
+
+.total {
+    margin-top: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--verde);
+    text-align: right;
+}
+
+.panel-precios {
+    max-width: 950px;
+    margin: 55px auto 20px;
+}
+
+.panel-precios h2 {
+    text-align: center;
+}
+
+/* ORGANIZACIÓN */
+
+.tablero {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.columna {
+    background: #fffaf5;
+    padding: 15px;
+    border-radius: 13px;
+    min-height: 190px;
+    box-shadow: 0 4px 12px #68433112;
+}
+
+.columna h3 {
+    text-align: center;
+    color: var(--rosa-fuerte);
+    margin-bottom: 15px;
+}
+
+.tarea {
+    background: #f5e4d9;
+    padding: 12px;
+    border-radius: 9px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* VIDEOS */
+
+.videos .tarjeta {
+    padding: 25px;
+}
+
+/* REDES SOCIALES */
+
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 25px;
+    border-radius: 35px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+    box-shadow: 0 5px 12px #00000018;
+}
+
+.social:hover {
+    transform: translateY(-4px);
+}
+
+.instagram {
+    background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+}
+
+.facebook {
+    background: #1877f2;
+}
+
+.whatsapp {
+    background: #25d366;
+}
+
+/* PIE DE PÁGINA */
+
+footer {
+    background: var(--cafe);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+footer h2,
+.integrantes h3 {
+    color: #f6d8b8;
+}
+
+footer h2 {
+    margin-bottom: 8px;
+}
+
+.integrantes {
+    margin: 25px 0;
+}
+
+.integrantes h3 {
+    margin-bottom: 10px;
+}
+
+.integrantes p {
+    margin: 4px 0;
+}
+
+.copyright {
+    border-top: 1px solid #ffffff40;
+    padding-top: 15px;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+/* PÁGINAS EXTERNAS */
+
+.pagina-titulo {
+    background: #f4d8d0;
+    text-align: center;
+    padding: 55px 20px;
+}
+
+.pagina-titulo h2 {
+    font-size: 36px;
+}
+
+.pagina-titulo p {
+    color: #76594b;
+}
+
+.aviso-cantidades {
+    max-width: 950px;
+    margin: 0 auto 25px;
+    background: #fff2d9;
+    border-left: 5px solid var(--dorado);
+    padding: 16px 20px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.enlaces-destacados {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+/* RECETAS */
+
+.recetas {
+    max-width: 1050px;
+    margin: auto;
+}
+
+.receta {
+    background: white;
+    text-align: left;
+    padding: 28px;
+    margin: 28px auto;
+    border-radius: 16px;
+    box-shadow: 0 5px 18px #68433115;
+    scroll-margin-top: 120px;
+}
+
+.receta h2 {
+    color: var(--rosa-fuerte);
+    font-size: 27px;
+    margin-bottom: 5px;
+}
+
+.receta h3 {
+    margin: 18px 0 7px;
+    color: var(--cafe);
+}
+
+.receta ul,
+.receta ol {
+    padding-left: 25px;
+}
+
+.receta li {
+    margin: 7px 0;
+}
+
+.rendimiento {
+    color: var(--verde);
+    font-weight: bold;
+}
+
+/* FORMULARIO DE RESEÑAS */
+
+.form-resena {
+    max-width: 650px;
+    margin: 0 auto;
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 5px 18px #68433115;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.form-resena label {
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.form-resena input,
+.form-resena select,
+.form-resena textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dfc9bb;
+    border-radius: 9px;
+    font: inherit;
+    background: #fffdfa;
+    color: var(--cafe);
+}
+
+.form-resena button {
+    margin-top: 12px;
+}
+
+.nota {
+    font-size: 12px;
+    color: #876d5c;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.lista-resenas {
+    max-width: 800px;
+    margin: 30px auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 15px;
+    text-align: left;
+}
+
+.resena {
+    background: white;
+    border-radius: 13px;
+    padding: 18px;
+    box-shadow: 0 4px 14px #68433112;
+    overflow-wrap: anywhere;
+}
+
+.resena h3 {
+    font-size: 17px;
+    color: var(--cafe);
+}
+
+.resena .estrellas {
+    color: #d6a033;
+    font-size: 20px;
+}
+
+.resena small {
+    color: #987d6d;
+}
+
+.sin-resenas {
+    text-align: center;
+    grid-column: 1 / -1;
+    color: #876d5c;
+}
+
+/* DISEÑO PARA CELULARES */
+
+@media (max-width: 768px) {
+
+    header {
+        justify-content: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .seccion {
+        padding: 45px 5%;
+    }
+
+    .logo h1 {
+        font-size: 21px;
+    }
+
+    .tabla-costos {
+        padding: 15px;
+    }
+
+    .pagina-titulo h2 {
+        font-size: 29px;
+    }
+}
